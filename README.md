@@ -23,7 +23,7 @@ This will create a local container image `localhost/bazzite-gdx-rocm:latest` tha
 To install the image, use the following command:
 
 ```bash
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/iHad168/bazzite-gdx-rocm:latest
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ihad168/bazzite-gdx-rocm:latest
 ```
 
 After reboot, you'll have a version of Bazzite with the ROCm-compatible kernel.
