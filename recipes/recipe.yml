@@ -3,7 +3,7 @@
 name: bazzite-gdx-rocm
 description: This is my personal OS image with kernel downgraded for ROCm support.
 
-base-image: ghcr.io/ublue-os/bazzite-gdx:latest
+base-image: ghcr.io/ublue-os/bazzite-gdx
 image-version: latest
 
 modules:
