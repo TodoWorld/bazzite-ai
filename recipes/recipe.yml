@@ -8,10 +8,6 @@ image-version: latest
 
 modules:
 
-  # Remove unnecessary modules for ROCm
-  - type: rpm-ostree
-    remove:
-
   # Install downgraded kernel for ROCm support and other packages
   - type: rpm-ostree
     install:
@@ -24,3 +20,15 @@ modules:
       - flatpak-xdg-utils
       - snapd
 
+  # Install Juju and deploy Charmed Kubeflow
+  - type: script
+    scripts:
+      - |
+        #!/bin/bash
+        set -e
+
+        # Install Juju
+        snap install juju --classic
+
+        # Add Juju repository for Charmed Kubeflow
+        juju deploy kubeflow --channel 1.10/stable
