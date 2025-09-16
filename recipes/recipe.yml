@@ -23,4 +23,4 @@ modules:
   # Install Charmed Kubeflow tools
   - type: script
     scripts:
-      - scripts/install_kubeflow.sh
+      - install_kubeflow.sh
