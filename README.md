@@ -23,7 +23,7 @@ This will create a local container image `localhost/bazzite-gdx-rocm:latest` tha
 To install the image, use the following command:
 
 ```bash
-sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ihad168/bazzite-gdx-rocm:latest
+sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/todoworld/bazzite-ai:latest
 ```
 
 After reboot, you'll have a version of Bazzite with the ROCm-compatible kernel.
@@ -45,7 +45,7 @@ To verify that ROCm works correctly:
 
 ## Specific Problem Solved
 
-This project solves the compatibility issue between ROCm and newer Linux kernel versions. ROCm requires specific kernel versions (in this case, 6.13.7) to work properly on AMD hardware, while Bazzite by default uses newer kernels.
+This project solves the compatibility issue between ROCm and newer Linux kernel versions. ROCm requires specific kernel versions (in this case, 6.13.7) to work properly on AMD hardware, while  by default uses newer kernels.
 
 ## Changes Made
 
@@ -62,7 +62,7 @@ Several stock kernel modules and third-party drivers were removed to simplify th
 
 ### Installed Packages
 
-A custom Bazzite kernel and its modules were installed to replace the removed stock Bazzite components:
+A custom  kernel and its modules were installed to replace the removed stock  components:
 
 - [`kernel-.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
 - [`kernel-core-.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
