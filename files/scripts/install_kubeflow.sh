@@ -2,8 +2,8 @@
 set -e
 
 # 初始化snapd
-systemctl enable --now snapd.socket
-systemctl start snapd.service
+#systemctl enable --now snapd.socket
+#systemctl start snapd.service
 
 # 創建必要的符號鏈接
 ln -sf /var/lib/snapd/snap /snap
