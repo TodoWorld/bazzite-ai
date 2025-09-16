@@ -56,37 +56,17 @@ To enable full ROCm compatibility, the following adjustments were made:
 Several stock kernel modules and third-party drivers were removed to simplify the image:
 
 - **Kernel components**:
-  - `kernel`
-  - `kernel-core`
-  - `kernel-modules`
-  - `kernel-modules-extra`
-  - `kernel-devel`
-  - `kernel-modules-core`
+
 - **Device modules**: 
-  - `bmi260`, `kmod-bmi260`
-  - `broadcom-wl`
-  - `gpd-fan`, `kmod-gpd-fan`
-  - `kmod-ayaneo-platform`, `ayaneo-platform`
-  - `kmod-ayn-platform`, `ayn-platform`
-  - `kmod-framework-laptop`, `framework-laptop-kmod-common`
-  - `kmod-gcadapter_oc`, `gcadapter_oc`
-  - `kmod-openrazer`, `openrazer-kmod-common`
-  - `kmod-v4l2loopback`, `v4l2loopback`
-  - `kmod-wl`
-  - `kvmfr`, `kmod-kvmfr`
-  - `nct6687d`, `kmod-nct6687d`
-  - `ryzen-smu`, `kmod-ryzen-smu`
-  - `kmod-vhba`, `vhba`
-  - `kmod-xone`, `xone-kmod-common`
-  - `kmod-zenergy`, `zenergy`
+
 
 ### Installed Packages
 
 A custom Bazzite kernel and its modules were installed to replace the removed stock Bazzite components:
 
-- [`kernel-6.13.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
-- [`kernel-core-6.13.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
-- [`kernel-modules-6.13.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
+- [`kernel-.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
+- [`kernel-core-.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
+- [`kernel-modules-.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
 - [`kernel-modules-core-6.13.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
 - [`kernel-modules-extra-6.13.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
 - [`kernel-devel-6.13.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
