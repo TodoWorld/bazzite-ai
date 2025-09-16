@@ -20,15 +20,7 @@ modules:
       - flatpak-xdg-utils
       - snapd
 
-  # Install Juju and deploy Charmed Kubeflow
+  # Install Charmed Kubeflow tools
   - type: script
     scripts:
-      - |
-        #!/bin/bash
-        set -e
-
-        # Install Juju
-        snap install juju --classic
-
-        # Add Juju repository for Charmed Kubeflow
-        juju deploy kubeflow --channel 1.10/stable
+      - files/scripts/install_kubeflow.sh
