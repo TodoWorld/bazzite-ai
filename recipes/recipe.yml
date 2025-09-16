@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: bazzite-gdx-rocm
-description: This is my personal OS image with kernel downgraded for ROCm support.
+name: bazzite-ai
+description: This is pre-install some AI tools OS image.
 
 base-image: ghcr.io/ublue-os/bazzite-gdx
 image-version: latest
@@ -11,55 +11,10 @@ modules:
   # Remove unnecessary modules for ROCm
   - type: rpm-ostree
     remove:
-      - bmi260
-      - kmod-bmi260
-      - broadcom-wl
-      - gpd-fan
-      - kmod-gpd-fan
-      - kernel-devel-matched
-      - kmod-ayaneo-platform
-      - ayaneo-platform
-      - kmod-ayn-platform
-      - ayn-platform
-      - kmod-framework-laptop
-      - framework-laptop-kmod-common
-      - kmod-gcadapter_oc
-      - gcadapter_oc
-      - kmod-openrazer
-      - openrazer-kmod-common
-      - kmod-wl
-      - kvmfr
-      - kmod-kvmfr
-      - nct6687d
-      - kmod-nct6687d
-      - ryzen-smu
-      - kmod-ryzen-smu
-      - vhba
-      - kmod-vhba
-      - zenergy
-      - kmod-zenergy
-      - kernel-core
-      - kernel-modules-core
-      - kernel-modules
-      - kernel-modules-extra
-      - kernel-devel
-      - kernel
-      - kmod-xone
-      - kmod-v4l2loopback
-      - v4l2loopback
-      - xone-kmod-common
-      - kmod-evdi        # << 要依賴Linux6.15
-      - displaylink      # << 要依賴Linux6.15
+
   # Install downgraded kernel for ROCm support and other packages
   - type: rpm-ostree
     install:
-      - https://github.com/bazzite-org/kernel-bazzite/releases/download/6.13.7-107/kernel-devel-matched-6.13.7-107.bazzite.fc42.x86_64.rpm
-      - https://github.com/bazzite-org/kernel-bazzite/releases/download/6.13.7-107/kernel-devel-6.13.7-107.bazzite.fc42.x86_64.rpm
-      - https://github.com/bazzite-org/kernel-bazzite/releases/download/6.13.7-107/kernel-6.13.7-107.bazzite.fc42.x86_64.rpm
-      - https://github.com/bazzite-org/kernel-bazzite/releases/download/6.13.7-107/kernel-core-6.13.7-107.bazzite.fc42.x86_64.rpm
-      - https://github.com/bazzite-org/kernel-bazzite/releases/download/6.13.7-107/kernel-modules-6.13.7-107.bazzite.fc42.x86_64.rpm
-      - https://github.com/bazzite-org/kernel-bazzite/releases/download/6.13.7-107/kernel-modules-core-6.13.7-107.bazzite.fc42.x86_64.rpm
-      - https://github.com/bazzite-org/kernel-bazzite/releases/download/6.13.7-107/kernel-modules-extra-6.13.7-107.bazzite.fc42.x86_64.rpm
       - rpm-build
       - rpmdevtools
       - gcc
@@ -67,4 +22,5 @@ modules:
       - git
       - obs-studio
       - flatpak-xdg-utils
+      - snapd
 
