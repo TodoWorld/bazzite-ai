@@ -1,4 +1,4 @@
-# Bazzite GDX ROCm
+# Bazzite AI
 
 This project creates a customized Bazzite GDX image with a downgraded kernel (6.13.7-107) to support ROCm on AMD hardware.
 
