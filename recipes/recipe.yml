@@ -30,8 +30,8 @@ modules:
     snippets:
       - RUN ln -sf /var/lib/snapd/snap /snap || true
 #      - RUN snap wait system seed.loaded
-      - RUN snap install juju --classic
-      - RUN juju deploy kubeflow --channel 1.10/stable
+#      - RUN snap install juju --classic
+#      - RUN juju deploy kubeflow --channel 1.10/stable
 
 
   # Install Charmed Kubeflow tools
