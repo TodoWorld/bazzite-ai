@@ -2,6 +2,13 @@
 
 This project creates a customized Bazzite GDX image to support ROCm on AMD hardware.
 
+## Support Package
+
+- Snapcraft
+- Flatpak
+- Appimage
+- Homebrew
+
 ## Contents
 
 - `recipes/recipe.yml`: The BlueBuild recipe to create the customized image
@@ -48,7 +55,13 @@ To verify that ROCm works correctly:
 
 To enable full ROCm compatibility, the following adjustments were made:
 
+### Added Packages
+
+- snapd
+
 ### Removed Packages
+
+-
 
 Several stock kernel modules and third-party drivers were removed to simplify the image:
 
