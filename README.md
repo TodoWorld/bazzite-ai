@@ -2,7 +2,7 @@
 
 This project creates a customized Bazzite GDX image to support ROCm on AMD hardware.
 
-## Support Package
+## Support Package Manager Tools
 
 - Snapcraft
 - Flatpak
