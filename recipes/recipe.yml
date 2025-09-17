@@ -21,7 +21,6 @@ modules:
       - snapd
 
   - type: systemd
-    user: false  # false = 系統單元，true = 用戶單元
     units:
       - name: snapd
         enabled: true
