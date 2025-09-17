@@ -19,6 +19,10 @@ modules:
       - obs-studio
       - flatpak-xdg-utils
       - snapd
+      - bcache-tools
+      - bcachefs-tools
+      - fcitx5-rime
+      - gnome-disk-utility
 
   - type: systemd
     system:
