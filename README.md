@@ -1,6 +1,6 @@
 # Bazzite AI
 
-This project creates a customized Bazzite GDX image with a downgraded kernel (6.13.7-107) to support ROCm on AMD hardware.
+This project creates a customized Bazzite GDX image to support ROCm on AMD hardware.
 
 ## Contents
 
@@ -14,8 +14,7 @@ The image can be built using BlueBuild:
 bluebuild build
 ```
 
-This will create a local container image `localhost/bazzite-gdx-rocm:latest` that includes:
-- Downgraded kernel to 6.13.7-107 (ROCm compatible)
+This will create a local container image `localhost/bazzite-ai:latest` that includes:
 - Build tools needed for kernel modules
 
 ## Installation
@@ -35,7 +34,6 @@ To verify the system is using the correct kernel:
 ```bash
 uname -r
 ```
-You should see `6.13.7-107.bazzite.fc42.x86_64`.
 
 ### ROCm verification
 To verify that ROCm works correctly:
@@ -45,7 +43,6 @@ To verify that ROCm works correctly:
 
 ## Specific Problem Solved
 
-This project solves the compatibility issue between ROCm and newer Linux kernel versions. ROCm requires specific kernel versions (in this case, 6.13.7) to work properly on AMD hardware, while  by default uses newer kernels.
 
 ## Changes Made
 
@@ -64,13 +61,6 @@ Several stock kernel modules and third-party drivers were removed to simplify th
 
 A custom  kernel and its modules were installed to replace the removed stock  components:
 
-- [`kernel-.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
-- [`kernel-core-.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
-- [`kernel-modules-.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
-- [`kernel-modules-core-6.13.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
-- [`kernel-modules-extra-6.13.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
-- [`kernel-devel-6.13.7-107.bazzite.fc42.x86_64.rpm`](https://github.com/bazzite-org/kernel-bazzite/releases)
-
 This ensures maximum compatibility with AMD GPUs using the ROCm stack.
 
 ### Additional Software
@@ -83,7 +73,7 @@ If you are building this on Fedora Atomic, you can generate an offline ISO follo
 Note: Due to size constraints, ISOs cannot be freely hosted on GitHub; alternative hosting must be used for public distribution.
 
 ```bash
-sudo bluebuild generate-iso --iso-name bazzite-gdx-rocm.iso image ghcr.io/ihad168/bazzite-gdx-rocm:latest
+sudo bluebuild generate-iso --iso-name bazzite-ai.iso image ghcr.io/ihad168/bazzite-ai:latest
 ```
 
 ## Credits
