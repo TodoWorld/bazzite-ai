@@ -20,7 +20,23 @@ modules:
       - flatpak-xdg-utils
       - snapd
 
+  - type: systemd
+    user: false  # false = 系統單元，true = 用戶單元
+    units:
+      - name: snapd
+        enabled: true
+      - name: snapd.socket
+        enabled: true
+
+  - type: containerfile
+    snippets:
+      - RUN ln -sf /var/lib/snapd/snap /snap || true
+      - RUN snap wait system seed.loaded
+      - RUN snap install juju --classic
+      - RUN juju deploy kubeflow --channel 1.10/stable
+
+
   # Install Charmed Kubeflow tools
-  - type: script
-    scripts:
-      - install_kubeflow.sh
+#  - type: script
+#    scripts:
+#      - install_kubeflow.sh
