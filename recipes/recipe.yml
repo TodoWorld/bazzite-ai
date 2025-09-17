@@ -21,11 +21,10 @@ modules:
       - snapd
 
   - type: systemd
-    units:
-      - name: snapd
-        enabled: true
-      - name: snapd.socket
-        enabled: true
+    system:
+      enabled:
+        - snapd
+        - snapd.socket
 
   - type: containerfile
     snippets:
