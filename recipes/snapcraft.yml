@@ -15,7 +15,14 @@ modules:
 
   - type: containerfile
     snippets:
+      - RUN ls
 #      - RUN snap wait system seed.loaded
 #      - RUN snap install juju --classic
 
   - from-file: juju.yml
+
+  - type: containerfile
+    snippets:
+      - RUN ls
+#      - RUN snap wait system seed.loaded
+#      - RUN snap install juju --classic

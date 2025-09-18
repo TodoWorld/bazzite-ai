@@ -1,4 +1,8 @@
 modules:
+  - type: rpm-ostree
+    install:
+      - flatpak-xdg-utils
+
   - type: default-flatpaks
     configurations:
       - scope: user
@@ -10,5 +14,4 @@ modules:
         repo:
           title: Flathub (system)
         install: # system flatpaks we want all users to have and not remove
-          - it.mijorus.gearlever
           - io.github.prateekmedia.appimagepool

@@ -1,4 +1,19 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
 modules:
+  - type: default-flatpaks
+    configurations:
+      - scope: user
+        repo:
+          # you can override the title to make inclusion of both system and user repos clearer
+          title: Flathub (user)
+      - notify: true
+        scope: system
+        repo:
+          title: Flathub (system)
+        install: # system flatpaks we want all users to have and not remove
+          - it.mijorus.gearlever
+          - io.github.prateekmedia.appimagepool
+
   - type: containerfile
     snippets:
-#      - RUN wget -O /tmp/Pinokio-3.9.0.AppImage https://github.com/pinokiocomputer/pinokio/releases/download/3.9.0/Pinokio-3.9.0.AppImage && flatpak run it.mijorus.gearlever --integrate /tmp/Pinokio-3.9.0.AppImage -y
+      - RUN wget -O /tmp/Pinokio-3.9.0.AppImage https://github.com/pinokiocomputer/pinokio/releases/download/3.9.0/Pinokio-3.9.0.AppImage && flatpak run it.mijorus.gearlever --integrate /tmp/Pinokio-3.9.0.AppImage -y

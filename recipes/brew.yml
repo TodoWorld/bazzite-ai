@@ -1,1 +1,4 @@
 modules:
+  - type: containerfile
+    snippets:
+      - RUN ls

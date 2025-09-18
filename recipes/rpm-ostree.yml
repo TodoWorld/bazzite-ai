@@ -7,7 +7,6 @@ modules:
       - make
       - git
       - obs-studio
-      - flatpak-xdg-utils
       - bcache-tools
       - bcachefs-tools
       - gnome-disk-utility
