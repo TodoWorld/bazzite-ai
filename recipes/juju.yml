@@ -1,0 +1,4 @@
+modules:
+  - type: containerfile
+    snippets:
+#      - RUN juju deploy kubeflow --channel 1.10/stable

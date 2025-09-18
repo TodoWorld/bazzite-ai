@@ -1,0 +1,21 @@
+modules:
+  - type: rpm-ostree
+    install:
+      - snapd
+
+  - type: systemd
+    system:
+      enabled:
+        - snapd
+        - snapd.socket
+
+  - type: containerfile
+    snippets:
+      - RUN ln -sf /var/lib/snapd/snap /snap || true
+
+  - type: containerfile
+    snippets:
+#      - RUN snap wait system seed.loaded
+#      - RUN snap install juju --classic
+
+  - from-file: juju.yml

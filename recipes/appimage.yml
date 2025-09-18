@@ -1,0 +1,4 @@
+modules:
+  - type: containerfile
+    snippets:
+#      - RUN wget -O /tmp/Pinokio-3.9.0.AppImage https://github.com/pinokiocomputer/pinokio/releases/download/3.9.0/Pinokio-3.9.0.AppImage && flatpak run it.mijorus.gearlever --integrate /tmp/Pinokio-3.9.0.AppImage -y

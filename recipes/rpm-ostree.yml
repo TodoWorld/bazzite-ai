@@ -1,0 +1,14 @@
+modules:
+  - type: rpm-ostree
+    install:
+      - rpm-build
+      - rpmdevtools
+      - gcc
+      - make
+      - git
+      - obs-studio
+      - flatpak-xdg-utils
+      - bcache-tools
+      - bcachefs-tools
+      - gnome-disk-utility
+      - fcitx5-rime

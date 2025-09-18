@@ -7,49 +7,13 @@ base-image: ghcr.io/ublue-os/bazzite-gdx
 image-version: latest
 
 modules:
+  - from-file: rpm-ostree.yml
+  - from-file: appimage.yml
+  - from-file: brew.yml
+  - from-file: flakpak.yml
+  - from-file: snapcraft.yml
 
-  # Install downgraded kernel for ROCm support and other packages
-  - type: rpm-ostree
-    install:
-      - rpm-build
-      - rpmdevtools
-      - gcc
-      - make
-      - git
-      - obs-studio
-      - flatpak-xdg-utils
-      - snapd
-      - bcache-tools
-      - bcachefs-tools
-      - fcitx5-rime
-      - gnome-disk-utility
 
-  - type: systemd
-    system:
-      enabled:
-        - snapd
-        - snapd.socket
-
-  - type: containerfile
-    snippets:
-      - RUN ln -sf /var/lib/snapd/snap /snap || true
-#      - RUN snap wait system seed.loaded
-#      - RUN snap install juju --classic
-#      - RUN juju deploy kubeflow --channel 1.10/stable
-
-  - type: default-flatpaks
-    configurations:
-      - scope: user
-        repo:
-          # you can override the title to make inclusion of both system and user repos clearer
-          title: Flathub (user)
-      - notify: true
-        scope: system
-        repo:
-          title: Flathub (system)
-        install: # system flatpaks we want all users to have and not remove
-          - it.mijorus.gearlever
-          - io.github.prateekmedia.appimagepool
 
   # Install Charmed Kubeflow tools
 #  - type: script
