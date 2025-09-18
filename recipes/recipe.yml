@@ -7,6 +7,7 @@ base-image: ghcr.io/ublue-os/bazzite-gdx
 image-version: latest
 
 modules:
+  - from-file: overlay.yml
   - from-file: appimage.yml
   - from-file: brew.yml
   - from-file: docker-compose.yml

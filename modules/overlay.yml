@@ -1,0 +1,4 @@
+modules:
+  - type: script
+    scripts:
+      - setup_overlay.sh
