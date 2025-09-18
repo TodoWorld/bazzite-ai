@@ -7,7 +7,10 @@ base-image: ghcr.io/ublue-os/bazzite-gdx
 image-version: latest
 
 modules:
-  - from-file: overlay.yml
+  - type: script
+    scripts:
+      - setup_overlay.sh
+
   - from-file: appimage.yml
   - from-file: brew.yml
   - from-file: docker-compose.yml
@@ -15,7 +18,3 @@ modules:
   - from-file: rpm-ostree.yml
   - from-file: snapcraft.yml
 
-  # Install Charmed Kubeflow tools
-#  - type: script
-#    scripts:
-#      - install_kubeflow.sh
