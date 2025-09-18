@@ -9,7 +9,7 @@ image-version: latest
 modules:
   - type: script
     scripts:
-      - setup_overlay.sh
+      - root_overlay.sh
 
   - from-file: appimage.yml
   - from-file: brew.yml
