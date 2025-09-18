@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+modules:
+  - type: rpm-ostree
+    install:
+      - docker-compose-plugin
+
+  - type: containerfile
+    snippets:
+      - RUN ls
+#      - RUN podman pull docker.io/mudler/localagi:latest || true

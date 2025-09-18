@@ -11,3 +11,4 @@ modules:
       - bcachefs-tools
       - gnome-disk-utility
       - fcitx5-rime
+      - https://github.com/pinokiocomputer/pinokio/releases/download/3.9.0/Pinokio-3.9.0.x86_64.rpm
