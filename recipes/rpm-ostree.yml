@@ -12,3 +12,4 @@ modules:
       - gnome-disk-utility
       - fcitx5-rime
       - https://github.com/pinokiocomputer/pinokio/releases/download/3.9.0/Pinokio-3.9.0.x86_64.rpm
+      - https://github.com/TibixDev/winboat/releases/download/v0.8.1/winboat-0.8.1-x86_64.rpm
