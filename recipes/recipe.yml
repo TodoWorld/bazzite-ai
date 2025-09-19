@@ -9,7 +9,7 @@ image-version: latest
 modules:
   - type: script
     scripts:
-      - root_overlay.sh
+      - fix_roothome_permissions.sh
 
   - from-file: appimage.yml
   - from-file: brew.yml
