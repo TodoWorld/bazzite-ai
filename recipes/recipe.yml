@@ -7,9 +7,6 @@ base-image: ghcr.io/ublue-os/bazzite-gdx
 image-version: latest
 
 modules:
-  - type: script
-    scripts:
-      - fix_roothome_permissions.sh
 
   - from-file: appimage.yml
   - from-file: brew.yml

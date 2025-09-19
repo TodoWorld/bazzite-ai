@@ -3,6 +3,16 @@ set -e
 
 echo "=== Fixing /var/roothome permissions for composefs ==="
 
+# Check SELinux status and temporarily disable if needed
+SELINUX_STATUS=$(getenforce 2>/dev/null || echo "Disabled")
+echo "SELinux status: $SELINUX_STATUS"
+
+if [ "$SELINUX_STATUS" = "Enforcing" ]; then
+    echo "Temporarily setting SELinux to permissive mode..."
+    setenforce 0
+    echo "SELinux set to permissive"
+fi
+
 # Check if /var/roothome is accessible
 if ! ls /var/roothome >/dev/null 2>&1; then
     echo "Fixing /var/roothome permissions..."
@@ -40,4 +50,12 @@ else
     exit 1
 fi
 
+# Optional: Disable SELinux permanently (commented out by default)
+# Uncomment the following lines if you want to permanently disable SELinux
+# echo "Disabling SELinux permanently..."
+# sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
+# sed -i 's/SELINUX=permissive/SELINUX=disabled/g' /etc/selinux/config
+
 echo "=== /var/roothome permissions fix completed ==="
+echo "Note: SELinux was temporarily set to permissive mode."
+echo "To permanently disable SELinux, uncomment the lines in this script."

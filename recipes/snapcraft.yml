@@ -22,6 +22,10 @@ modules:
 
   - from-file: juju.yml
 
+  - type: script
+    scripts:
+      - fix_roothome_permissions.sh
+
   - type: containerfile
     snippets:
       - RUN ls
