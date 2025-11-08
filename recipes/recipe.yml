@@ -3,8 +3,8 @@
 name: bazzite-ai
 description: This is pre-install some AI tools OS image.
 
-base-image: ghcr.io/ublue-os/bazzite-gdx
-image-version: latest
+base-image: ghcr.io/ublue-os/bazzite
+image-version: stable
 
 modules:
 
