@@ -2,7 +2,7 @@
 modules:
   - type: rpm-ostree
     install:
-      - docker-compose-plugin
+      - docker-compose
 
   - type: containerfile
     snippets:
