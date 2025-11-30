@@ -14,7 +14,6 @@ modules:
       - fcitx5-rime
       - python3-tkinter
       - python3-devel
-      - timeshift
-      - winboat
+      - btrfs-assistant
       - https://github.com/pinokiocomputer/pinokio/releases/download/3.9.0/Pinokio-3.9.0.x86_64.rpm
       - https://github.com/TibixDev/winboat/releases/download/v0.9.0/winboat-0.9.0-x86_64.rpm
