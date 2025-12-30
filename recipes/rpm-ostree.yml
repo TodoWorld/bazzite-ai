@@ -11,7 +11,6 @@ modules:
       - bcachefs-tools
       - rocminfo
       - gnome-disk-utility
-      - fcitx5-rime
       - python3-tkinter
       - python3-devel
       - btrfs-assistant
